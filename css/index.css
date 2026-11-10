@@ -1208,3 +1208,160 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+
+/* Figma-exported artwork: keep the decorative images separate from live text. */
+.hero-art {
+  background: none;
+  filter: none;
+  opacity: 1;
+  transform: none;
+}
+
+.hero-art::before {
+  position: absolute;
+  z-index: 0;
+  inset: -12%;
+  background:
+    radial-gradient(ellipse at 39% 66%, rgba(240, 61, 160, 0.55), transparent 32%),
+    radial-gradient(ellipse at 72% 23%, rgba(255, 154, 68, 0.6), transparent 25%),
+    url("../images/FirstLandingFull.webp") center 48% / cover no-repeat;
+  content: "";
+  filter: blur(28px);
+  opacity: 0.82;
+  transform: rotate(-17deg) scale(1.12);
+}
+
+.orb-one {
+  z-index: 1;
+  top: 42%;
+  right: 27%;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 0;
+  background: url("../images/Ball.png") center / contain no-repeat;
+  box-shadow: none;
+}
+
+.intro-graphic {
+  isolation: isolate;
+}
+
+.intro-graphic::before {
+  top: 8%;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 0;
+  background: url("../images/Ball.png") center / contain no-repeat;
+  box-shadow: none;
+  transform: translateX(-50%);
+}
+
+.intro-graphic::after {
+  position: absolute;
+  z-index: -1;
+  inset: -18%;
+  background:
+    linear-gradient(135deg, rgba(8, 8, 11, 0.12), rgba(8, 8, 11, 0.38)),
+    url("../images/FirstLandingFull.webp") center 50% / cover no-repeat;
+  content: "";
+  transform: rotate(5deg) scale(1.18);
+}
+
+.intro-graphic > span {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card::before,
+.case-card::before {
+  inset: -18%;
+  background-size: cover;
+}
+
+.service-one::before {
+  background-image:
+    linear-gradient(135deg, rgba(221, 91, 164, 0.28), rgba(28, 66, 112, 0.22) 52%, rgba(8, 8, 14, 0.48)),
+    url("../images/FirstLandingFull.webp");
+  background-position: 48% 22%;
+  transform: rotate(-7deg) scale(1.22);
+}
+
+.service-two::before {
+  background-image:
+    linear-gradient(135deg, rgba(27, 113, 157, 0.28), rgba(113, 63, 149, 0.2) 52%, rgba(8, 8, 14, 0.48)),
+    url("../images/FirstLandingFull.webp");
+  background-position: 34% 40%;
+  transform: rotate(5deg) scale(1.22);
+}
+
+.service-three::before {
+  background-image:
+    linear-gradient(135deg, rgba(250, 173, 105, 0.25), rgba(83, 82, 165, 0.2) 52%, rgba(8, 8, 14, 0.48)),
+    url("../images/FirstLandingFull.webp");
+  background-position: 60% 64%;
+  transform: rotate(-4deg) scale(1.22);
+}
+
+.service-four::before {
+  background-image:
+    linear-gradient(135deg, rgba(17, 120, 138, 0.26), rgba(138, 59, 149, 0.2) 52%, rgba(8, 8, 14, 0.48)),
+    url("../images/FirstLandingFull.webp");
+  background-position: 42% 82%;
+  transform: rotate(8deg) scale(1.22);
+}
+
+.case-food::before {
+  background-image:
+    linear-gradient(135deg, rgba(19, 84, 129, 0.22), rgba(104, 52, 146, 0.2) 48%, rgba(8, 8, 14, 0.5)),
+    url("../images/FirstLandingFull.webp");
+  background-position: 52% 28%;
+  transform: rotate(6deg) scale(1.22);
+}
+
+.case-tech::before {
+  background-image:
+    linear-gradient(135deg, rgba(19, 84, 129, 0.24), rgba(104, 52, 146, 0.2) 48%, rgba(8, 8, 14, 0.5)),
+    url("../images/FirstLandingFull.webp");
+  background-position: 45% 72%;
+  transform: rotate(-6deg) scale(1.22);
+}
+
+.panel-symbol {
+  width: 64px;
+  height: 64px;
+  border-radius: 0;
+  background: url("../images/Ball.png") center / contain no-repeat;
+  box-shadow: none;
+  filter: drop-shadow(0 0 12px rgba(155, 89, 250, 0.4));
+}
+
+@media (min-width: 768px) {
+  .hero-art::before {
+    filter: blur(34px);
+  }
+
+  .orb-one {
+    z-index: 1;
+    top: 34%;
+    right: 30%;
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+
+
+.orb-one,
+.orb-two,
+.intro-graphic::before,
+.panel-symbol {
+  mix-blend-mode: screen;
+}
+
+.orb-two {
+  border-radius: 0;
+  background: url("../images/Ball.png") center / contain no-repeat;
+  box-shadow: none;
+}
