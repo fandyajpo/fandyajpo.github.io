@@ -33,6 +33,7 @@ tabButtons.forEach((button) => {
       tab.setAttribute('aria-selected', String(selected));
     });
     const [title, description] = expertise[button.dataset.panel];
+    tabPanel.setAttribute('aria-labelledby', button.id);
     tabPanel.querySelector('.panel-title').textContent = title;
     tabPanel.querySelectorAll('p')[1].textContent = description;
   });
