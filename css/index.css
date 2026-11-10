@@ -817,8 +817,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --gutter: max(40px, calc((100vw - 1600px) / 2));
+  }
+
   .wrap {
-    width: min(1200px, calc(100% - 80px));
+    width: min(1600px, calc(100% - 80px));
   }
 
   .site-header {
@@ -826,7 +830,8 @@ body {
     grid-template-columns: minmax(310px, 0.82fr) minmax(0, 1.7fr);
     gap: 0;
     height: 132px;
-    width: min(1200px, calc(100% - 80px));
+    width: min(1600px, calc(100% - 80px));
+    max-width: 1600px;
   }
 
   .brand {
@@ -869,6 +874,13 @@ body {
     margin: 0 0 -2px -2px;
     color: #fff;
     font-size: 0.65rem;
+  }
+
+  .hero.wrap {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .hero {
@@ -936,7 +948,7 @@ body {
   }
 
   .ticker-inner {
-    width: min(1200px, calc(100% - 80px));
+    width: min(1600px, calc(100% - 80px));
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
   }
